@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kryzel Portfolio | Personal Website</title>
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/custom/style.css" />
+  </head>
+  <body>
+    <!-- HEADER-->
+    <header class="main-header">
+      <nav class="navbar header-nav navbar-expand-lg">
+        <div class="container">
+          <!--Brand Name/Logo -->
+          <a href="#" class="navbar-brand">
+            <h4 class="mb-0">
+              <b>Kryzel <span class="text-primary">Rica</span></b>
+            </h4>
+          </a>
+          <!-- Navigation Menu -->
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbar-collapse-toggler"
+          >
+            <ul class="navbar-nav mx-auto">
+              <li>
+                <a href="index.html" class="nav-link">Home</a>
+              </li>
+
+              <li>
+                <a href="about.html" class="nav-link">About Me</a>
+              </li>
+
+              <li>
+                <a href="resume.html" class="nav-link">Resume</a>
+              </li>
+
+              <li>
+                <a href="portfolio.html" class="nav-link active">Portfolio</a>
+              </li>
+
+              <li class="d-lg-none mt-2">
+                <a class="colored-btn d-block text-center" href="contact.html"
+                  >Contact Now!</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!--COntact Button-->
+          <div class="ms-auto d-none d-lg-block">
+            <a class="colored-btn" href="contact.html">Contact Now!</a>
+          </div>
+          <!--Mobile Menu Toggle-->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbar-collapse-toggler"
+            aria-controls="navbar-collapse-toggler"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <!-- Icon representation for the toggle -->
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!--Portfolio-->
+    <section id="portfolio" class="section bg-gray">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Portfolio</h2>
+          <br />
+          <p class="pt-2">
+            Bringing ideas to life through smart and user-friendly web apps!
+            Check out my latest projects and see how technology can make a
+            difference.
+          </p>
+        </div>
+
+        <div class="portfolio-box">
+          <h3 class="text-center pb-5 pt-3"><b>Latest Project</b></h3>
+          <div
+            class="row bg-3 gx-3 gy-4 mb-5 pb-lg-3 mb-lg-3 justify-content-around align-items-center"
+          >
+            <div class="col-md-6 col-lg-5">
+              <div class="project-img">
+                <img src="assets/image/project1.jpg" alt="" />
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-5">
+              <div class="porfolio-text">
+                <span><a href="portfolio_pro1.html"> Web app</a></span>
+                <h4>Payroll Application</h4>
+                <p>
+                  A payroll management system designed to automate salary
+                  processing, enhance accuracy, and improve efficiency for small
+                  stores with employees.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="row bg-3 gx-3 gy-4 mb-5 pb-lg-3 mb-lg-3 justify-content-around align-items-center"
+          >
+            <div class="col-md-6 col-lg-5">
+              <div class="porfolio-text">
+                <span><a href="portfolio_pro2.html">Web app</a></span>
+                <h4>Phil Arts</h4>
+                <p>
+                  A platform for Filipino digital artists to upload and share
+                  their artwork, while reading and publishing digital stories.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-5">
+              <div class="project-img">
+                <img src="assets/image/Project-two.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
