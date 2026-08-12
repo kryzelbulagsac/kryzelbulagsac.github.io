@@ -430,6 +430,7 @@ a:hover {
 /*--------------------------------------------------------------
 # ABOUT ME
 --------------------------------------------------------------*/
+
 .section {
   position: relative;
   overflow: hidden;
@@ -448,8 +449,79 @@ a:hover {
   z-index: 1;
 }
 
+/*--------------------------------------------------------------
+# ABOUT PAGE BACKGROUND
+--------------------------------------------------------------*/
+
+.about-section {
+  position: relative;
+  background-color: #faf8f5;
+  overflow: hidden;
+}
+
+
+/* Decorative diagonal lines */
+
+.about-section::before {
+  content: "";
+
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  top: 0;
+  left: 0;
+
+  background:
+    repeating-linear-gradient(
+      -25deg,
+      transparent,
+      transparent 110px,
+      rgba(205, 118, 114, 0.045) 111px,
+      rgba(205, 118, 114, 0.045) 112px
+    );
+
+  pointer-events: none;
+}
+
+
+/* Large decorative diagonal shape */
+
+.about-section::after {
+  content: "";
+
+  position: absolute;
+
+  width: 700px;
+  height: 700px;
+
+  top: -350px;
+  right: -250px;
+
+  border: 1px solid rgba(205, 118, 114, 0.10);
+
+  transform: rotate(35deg);
+
+  pointer-events: none;
+}
+
+
+/* Keep content above background */
+
+.about-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+
+/*--------------------------------------------------------------
+# ABOUT TEXT
+--------------------------------------------------------------*/
+
 .about-text p {
   font-size: 18px;
+  line-height: 1.7;
 }
 
 .about-text h3 {
@@ -459,10 +531,119 @@ a:hover {
   border-bottom: 2px solid #cd7672;
 }
 
+
+/*--------------------------------------------------------------
+# PROFILE IMAGE
+--------------------------------------------------------------*/
+
 #profile {
   width: 300px;
   height: 350px;
+  object-fit: cover;
 }
+/*--------------------------------------------------------------
+# PROFILE PHOTO
+--------------------------------------------------------------*/
+
+.profile-area {
+  position: relative;
+}
+
+
+.profile-frame {
+  position: relative;
+
+  width: 300px;
+  height: 350px;
+
+  margin: 0 auto;
+}
+
+
+/* Photo */
+
+.profile-frame #profile {
+  position: relative;
+
+  width: 300px;
+  height: 350px;
+
+  object-fit: cover;
+
+  border: 6px solid #ffffff;
+
+  border-radius: 3px;
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.10);
+
+  z-index: 2;
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+
+/* Salmon decorative frame */
+
+.profile-frame::before {
+  content: "";
+
+  position: absolute;
+
+  width: 300px;
+  height: 350px;
+
+  top: 12px;
+  left: 12px;
+
+  border: 2px solid #cd7672;
+
+  z-index: 1;
+
+  transition:
+    transform 0.4s ease;
+}
+
+
+/* Olive decorative frame */
+
+.profile-frame::after {
+  content: "";
+
+  position: absolute;
+
+  width: 300px;
+  height: 350px;
+
+  top: -10px;
+  left: -10px;
+
+  border: 1px solid rgba(160, 160, 124, 0.7);
+
+  z-index: 0;
+}
+
+
+/* Photo hover */
+
+.profile-frame:hover #profile {
+  transform: translate(-4px, -4px);
+
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.14);
+}
+
+
+.profile-frame:hover::before {
+  transform: translate(5px, 5px);
+}
+
+
+/*--------------------------------------------------------------
+# PERSONAL INFORMATION
+--------------------------------------------------------------*/
 
 .about-text .info {
   font-size: 17px;
@@ -488,40 +669,60 @@ a:hover {
   font-weight: bold;
 }
 
+
+/*--------------------------------------------------------------
+# CAREER FOCUS ANIMATION
+--------------------------------------------------------------*/
+
 .nickname::after {
-  content: "Kryzel";
+  content: "Web Development";
   display: inline-block;
+
   overflow: visible;
   white-space: nowrap;
+
   border-right: 2px solid #555;
-  animation: typewriter 5s infinite steps(3), blink 0.5s infinite;
+
+  animation:
+    typewriter 5s infinite steps(3),
+    blink 0.5s infinite;
+
   color: #555;
   font-weight: bold;
 }
 
 @keyframes typewriter {
+
   0%,
   100% {
     content: "Web Development";
   }
-  33% {
-    content: "Rica";
-  }
+
   66% {
-    content: "Kryzz";
+    content: "Graphic Design";
   }
 }
 
 @keyframes blink {
+
   50% {
     border-color: transparent;
   }
 }
 
+
+/*--------------------------------------------------------------
+# WHAT I DO TITLE
+--------------------------------------------------------------*/
+
 .interest-title {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+.interest-title h6 {
+  margin: 0;
 }
 
 .interest-title h6 strong {
@@ -534,124 +735,750 @@ a:hover {
   width: 60px;
   height: 2px;
   background-color: #cd7672;
-  transition: width 0.3s ease-in-out;
+
+  transition:
+    width 0.3s ease-in-out;
 }
 
 .interest-title:hover .underline {
   width: 80px;
 }
+/*--------------------------------------------------------------
+# WHAT I DO
+--------------------------------------------------------------*/
 
-.hobbies-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-top: 20px;
+.what-i-do-section {
+  margin-top: 30px;
 }
 
-.hobby {
+
+/* Subtitle */
+
+.what-i-do-subtitle {
+  margin-top: 10px;
+  margin-bottom: 20px;
+
+  color: #888;
+
+  font-size: 13px;
+}
+
+
+/* Grid */
+
+.what-i-do-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 15px;
+}
+
+
+/*--------------------------------------------------------------
+# WORK CARD
+--------------------------------------------------------------*/
+
+.work-card {
+  position: relative;
+
+  min-height: 90px;
+
+  padding: 18px;
+
+  background: rgba(255, 255, 255, 0.92);
+
+  border: 1px solid #e9e4df;
+
+  border-radius: 10px;
+
+  overflow: hidden;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease,
+    min-height 0.35s ease;
+}
+
+
+/* Main card content */
+
+.work-card-main {
   display: flex;
+
   align-items: center;
-  gap: 10px;
-  width: 45%;
+
+  gap: 14px;
 }
 
-.hobby-icon {
-  width: 55px;
-  height: 55px;
-  background-color: #a0a07c;
-  border-radius: 50%;
+
+/*--------------------------------------------------------------
+# ICON
+--------------------------------------------------------------*/
+
+.work-icon {
+  width: 48px;
+  height: 48px;
+
+  min-width: 48px;
+
   display: flex;
+
   align-items: center;
   justify-content: center;
-  color: white;
+
+  border-radius: 50%;
+
+  background-color: #a0a07c;
+
+  color: #ffffff;
+
   font-size: 18px;
+
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
 }
 
-.hobby-text {
-  font-size: 18px;
-  color: #222;
+
+/*--------------------------------------------------------------
+# TITLE
+--------------------------------------------------------------*/
+
+.work-title h5 {
+  margin: 0;
+
+  color: #333;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  transition: color 0.3s ease;
 }
 
-@media (max-width: 767px) {
-  .hobbies-container {
-    flex-direction: column;
-  }
 
-  .hobby {
-    width: 100%;
-  }
+.work-title span {
+  display: block;
 
-  .hobby-icon {
-    width: 35px;
-    height: 35px;
-    font-size: 16px;
-  }
+  margin-top: 4px;
 
-  .hobby-text {
-    font-size: 16px;
-  }
+  color: #999;
+
+  font-size: 11px;
+}
+
+
+/*--------------------------------------------------------------
+# HIDDEN DETAILS
+--------------------------------------------------------------*/
+
+.work-card-details {
+  max-height: 0;
+
+  opacity: 0;
+
+  overflow: hidden;
+
+  transform: translateY(-10px);
+
+  transition:
+    max-height 0.4s ease,
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.work-card-details p {
+  margin-top: 16px;
+
+  margin-bottom: 12px;
+
+  color: #666;
+
+  font-size: 12px;
+
+  line-height: 1.6;
+}
+
+
+/*--------------------------------------------------------------
+# TAGS
+--------------------------------------------------------------*/
+
+.work-tags {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 6px;
+}
+
+
+.work-tags span {
+  padding: 5px 9px;
+
+  background-color: #f8eeee;
+
+  border-radius: 4px;
+
+  color: #c87571;
+
+  font-size: 10px;
+
+  font-weight: 600;
+}
+
+
+/*--------------------------------------------------------------
+# HOVER
+--------------------------------------------------------------*/
+
+.work-card:hover {
+  min-height: 185px;
+
+  transform: translateY(-5px);
+
+  border-color: #cd7672;
+
+  box-shadow:
+    0 15px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+.work-card:hover .work-icon {
+  background-color: #cd7672;
+
+  transform:
+    rotate(-5deg)
+    scale(1.08);
+}
+
+
+.work-card:hover .work-title h5 {
+  color: #cd7672;
+}
+
+
+.work-card:hover .work-card-details {
+  max-height: 130px;
+
+  opacity: 1;
+
+  transform: translateY(0);
 }
 
 /*--------------------------------------------------------------
-# Skills Section
+# WHAT I DO SUBTITLE
 --------------------------------------------------------------*/
-.skills {
-  background-color: #f4ebdc;
+
+.what-i-do-subtitle {
+  margin-top: 10px;
+  margin-bottom: 22px;
+
+  color: #777;
+  font-size: 13px;
+  line-height: 1.5;
 }
 
-#skill {
-  display: inline-block;
-  border-bottom: 3px solid #cd7672;
-  padding-bottom: 13px;
-}
 
-.skills .progress {
-  height: 60px;
-  display: block;
-  background: none;
-  border-radius: 0;
-  margin-bottom: 15px;
-}
+/*--------------------------------------------------------------
+# WHAT I DO GRID
+--------------------------------------------------------------*/
 
-.skills .progress .skill {
-  color: #cd7672;
-  padding: 0;
-  margin: 0 0 6px 0;
-  text-transform: uppercase;
-  display: flex;
-  justify-content: space-between;
-  font-weight: 600;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
+.what-i-do-grid {
+  display: grid;
 
-.skills .progress .skill .val {
-  float: right;
-  font-style: normal;
-}
+  grid-template-columns: repeat(2, 1fr);
 
-.skills .progress-bar-wrap {
-  background: color-mix(in srgb, #555, transparent 90%);
-  height: 10px;
+  gap: 15px;
+
   width: 100%;
-  border-radius: 5px;
+}
+
+
+/*--------------------------------------------------------------
+# WORK CARD
+--------------------------------------------------------------*/
+
+.work-card {
+  position: relative;
+
+  min-height: 78px;
+
+  padding: 17px;
+
+  background-color: #ffffff;
+
+  border: 1px solid #eeeeee;
+  border-radius: 10px;
+
+  cursor: pointer;
+
   overflow: hidden;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease,
+    min-height 0.35s ease;
 }
 
-.skills .progress-bar {
-  width: 0;
-  height: 10px;
+
+/*--------------------------------------------------------------
+# WORK CARD MAIN CONTENT
+--------------------------------------------------------------*/
+
+.work-card-main {
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+}
+
+
+/*--------------------------------------------------------------
+# WORK CARD ICON
+--------------------------------------------------------------*/
+
+.work-card .icon {
+  width: 45px;
+  height: 45px;
+
+  min-width: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background-color: #a0a07c;
+
+  color: #ffffff;
+
+  font-size: 17px;
+
+  transition:
+    background-color 0.35s ease,
+    transform 0.35s ease;
+}
+
+
+/*--------------------------------------------------------------
+# WORK CARD TITLE
+--------------------------------------------------------------*/
+
+.work-card h5 {
+  margin: 0;
+
+  color: #444444;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  transition:
+    color 0.3s ease;
+}
+
+
+/* Small description under title */
+
+.work-card-main span {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #999999;
+
+  font-size: 11px;
+}
+
+
+/*--------------------------------------------------------------
+# HIDDEN WORK DETAILS
+--------------------------------------------------------------*/
+
+.work-card-details {
+
+  /*
+   * Hidden before hover
+   */
+  max-height: 0;
+
+  opacity: 0;
+
+  overflow: hidden;
+
+  transform: translateY(-8px);
+
+  transition:
+    max-height 0.4s ease,
+    opacity 0.3s ease,
+    transform 0.35s ease;
+}
+
+
+/* Description */
+
+.work-card-details p {
+  margin-top: 17px;
+  margin-bottom: 12px;
+
+  color: #666666;
+
+  font-size: 12px;
+
+  line-height: 1.6;
+}
+
+
+/*--------------------------------------------------------------
+# TECHNOLOGY TAGS
+--------------------------------------------------------------*/
+
+.work-tags {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 6px;
+}
+
+.work-tags span {
+  display: inline-block;
+
+  padding: 5px 9px;
+
+  border-radius: 4px;
+
+  background-color: #f8eeee;
+
+  color: #c87571;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+
+/*--------------------------------------------------------------
+# WORK CARD HOVER
+--------------------------------------------------------------*/
+
+.work-card:hover {
+
+  /*
+   * Slight movement creates a more
+   * interactive feeling.
+   */
+  transform: translateY(-5px);
+
+  /*
+   * Your existing salmon accent.
+   */
+  border-color: #cd7672;
+
+  box-shadow:
+    0 12px 25px rgba(0, 0, 0, 0.08);
+
+  /*
+   * Give the card room for its
+   * hidden information.
+   */
+  min-height: 185px;
+}
+
+
+/* Icon hover */
+
+.work-card:hover .icon {
   background-color: #cd7672;
-  border-radius: 5px;
-  transition: width 1.5s ease-in-out;
+
+  transform:
+    rotate(-5deg)
+    scale(1.08);
 }
 
-@keyframes fillProgress {
+
+/* Title hover */
+
+.work-card:hover h5 {
+  color: #cd7672;
+}
+
+
+/* Reveal information */
+
+.work-card:hover .work-card-details {
+
+  max-height: 130px;
+
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+
+/*--------------------------------------------------------------
+# CARD BOTTOM ACCENT
+--------------------------------------------------------------*/
+
+.work-card::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 17px;
+  bottom: 0;
+
+  width: 0;
+  height: 3px;
+
+  background-color: #cd7672;
+
+  border-radius:
+    5px 5px 0 0;
+
+  transition:
+    width 0.35s ease;
+}
+
+.work-card:hover::after {
+  width: calc(100% - 34px);
+}
+
+
+/*--------------------------------------------------------------
+# TAG HOVER
+--------------------------------------------------------------*/
+
+.work-tags span:hover {
+
+  background-color: #cd7672;
+
+  color: #ffffff;
+}
+
+
+/*--------------------------------------------------------------
+# TABLET
+--------------------------------------------------------------*/
+
+@media (max-width: 991px) {
+
+  .what-i-do-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/*--------------------------------------------------------------
+# MOBILE
+--------------------------------------------------------------*/
+
+@media (max-width: 767px) {
+
+  .what-i-do-grid {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+  }
+
+
+  /*
+   * Phones don't have a traditional
+   * mouse hover, so show the details.
+   */
+
+  .work-card {
+    min-height: 170px;
+  }
+
+  .work-card-details {
+
+    max-height: 130px;
+
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+
+
+  .work-card:hover {
+    min-height: 170px;
+
+    transform: none;
+  }
+
+
+  .work-card:hover .icon {
+    transform: none;
+  }
+
+
+  .work-card::after {
+    width: calc(100% - 34px);
+  }
+
+}
+
+
+/*--------------------------------------------------------------
+# SMALL MOBILE
+--------------------------------------------------------------*/
+
+@media (max-width: 480px) {
+
+  .what-i-do-section {
+    margin-top: 30px;
+  }
+
+
+  .work-card {
+    padding: 15px;
+  }
+
+
+  .work-card .icon {
+    width: 42px;
+    height: 42px;
+
+    min-width: 42px;
+
+    font-size: 16px;
+  }
+
+
+  .work-card h5 {
+    font-size: 14px;
+  }
+
+
+  .work-card-main span {
+    font-size: 10px;
+  }
+
+
+  .work-card-details p {
+    font-size: 11px;
+  }
+
+}
+/*--------------------------------------------------------------
+# ANIMATED BACKGROUND ACCENT
+--------------------------------------------------------------*/
+
+.about-section .container::before {
+  content: "";
+
+  position: absolute;
+
+  width: 250px;
+  height: 2px;
+
+  top: 20px;
+  right: -100px;
+
+  background-color: rgba(205, 118, 114, 0.25);
+
+  transform: rotate(-25deg);
+
+  animation: aboutLineMove 6s ease-in-out infinite;
+}
+
+
+@keyframes aboutLineMove {
+
   0% {
-    width: 0;
+    transform:
+      translateX(0)
+      rotate(-25deg);
   }
+
+  50% {
+    transform:
+      translateX(-80px)
+      rotate(-25deg);
+  }
+
   100% {
-    width: attr(data-progress);
+    transform:
+      translateX(0)
+      rotate(-25deg);
   }
+
+}
+
+/*--------------------------------------------------------------
+# MOBILE
+--------------------------------------------------------------*/
+
+@media (max-width: 767px) {
+
+  .profile-frame {
+    width: 260px;
+    height: 310px;
+  }
+
+
+  .profile-frame #profile {
+    width: 260px;
+    height: 310px;
+  }
+
+
+  .profile-frame::before {
+    width: 260px;
+    height: 310px;
+  }
+
+
+  .profile-frame::after {
+    width: 260px;
+    height: 310px;
+  }
+
+
+  .what-i-do-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  /*
+   * Since phones don't have hover,
+   * show the information directly.
+   */
+
+  .work-card {
+    min-height: 175px;
+  }
+
+
+  .work-card-details {
+    max-height: 130px;
+
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+
+
+  .work-card:hover {
+    min-height: 175px;
+
+    transform: none;
+  }
+
 }
 
 /*--------------------------------------------------------------

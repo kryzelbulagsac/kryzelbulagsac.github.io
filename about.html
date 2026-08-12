@@ -1,227 +1,256 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kryzel Portfolio | Personal Website</title>
-    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/custom/style.css" />
-    <link
-      rel="stylesheet"
-      href="vendor/icons/fontawesome-free-6.7.2-web/css/all.min.css"
-    />
-  </head>
-  <body>
-    <!-- HEADER-->
-    <header class="main-header">
-      <nav class="navbar header-nav navbar-expand-lg">
-        <div class="container">
-          <!--Brand Name/Logo -->
-          <a href="#" class="navbar-brand">
-            <h4 class="mb-0">
-              <b>Kryzel <span class="text-primary">Rica</span></b>
-            </h4>
-          </a>
-          <!-- Navigation Menu -->
-          <div
-            class="collapse navbar-collapse justify-content-end"
-            id="navbar-collapse-toggler"
-          >
-            <ul class="navbar-nav mx-auto">
-              <li>
-                <a href="index.html" class="nav-link">Home</a>
-              </li>
+  ```html
+  <!doctype html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Kryzel Portfolio | About Me</title>
+      <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css" />
+      <link rel="stylesheet" href="assets/custom/style.css" />
+      <link
+        rel="stylesheet"
+        href="vendor/icons/fontawesome-free-6.7.2-web/css/all.min.css"
+      />
+    </head>
 
-              <li>
-                <a href="about.html" class="nav-link active">About Me</a>
-              </li>
+    <body>
+      <!-- HEADER-->
+      <header class="main-header">
+        <nav class="navbar header-nav navbar-expand-lg">
+          <div class="container">
+            <!-- Brand Name / Logo -->
+            <a href="index.html" class="navbar-brand">
+              <h4 class="mb-0">
+                <b> Kryzel <span class="text-primary">Rica</span> </b>
+              </h4>
+            </a>
 
-              <li>
-                <a href="resume.html" class="nav-link">Resume</a>
-              </li>
-
-              <li>
-                <a href="portfolio.html" class="nav-link">Portfolio</a>
-              </li>
-
-              <li class="d-lg-none mt-2">
-                <a class="colored-btn d-block text-center" href="contact.html"
-                  >Contact Now!</a
-                >
-              </li>
-            </ul>
-          </div>
-          <!--COntact Button-->
-          <div class="ms-auto d-none d-lg-block">
-            <a class="colored-btn" href="contact.html">Contact Now!</a>
-          </div>
-          <!--Mobile Menu Toggle-->
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbar-collapse-toggler"
-            aria-controls="navbar-collapse-toggler"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <!-- Icon representation for the toggle -->
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-        </div>
-      </nav>
-    </header>
-
-    <main>
-      <!-- About me -->
-      <section id="about" class="section">
-        <div class="container">
-          <div class="row gy-5 align-items-center">
-            <div class="col-lg-4 text-center">
-              <img
-                id="profile"
-                src="assets/image/my-profile.jpg"
-                class="img-thumbnail"
-                alt=""
-              />
+            <!-- Navigation Menu -->
+            <div
+              class="collapse navbar-collapse justify-content-end"
+              id="navbar-collapse-toggler"
+            >
+              <ul class="navbar-nav mx-auto">
+                <li>
+                  <a href="index.html" class="nav-link"> Home </a>
+                </li>
+                <li>
+                  <a href="about.html" class="nav-link active"> About Me </a>
+                </li>
+                <li>
+                  <a href="resume.html" class="nav-link"> Resume </a>
+                </li>
+                <li>
+                  <a href="portfolio.html" class="nav-link"> Portfolio </a>
+                </li>
+                <li class="d-lg-none mt-2">
+                  <a class="colored-btn d-block text-center" href="contact.html">
+                    HIRE ME
+                  </a>
+                </li>
+              </ul>
             </div>
 
-            <div class="col-lg-8 ps-lg-5">
-              <div class="about-text">
-                <h3 class="h1 mb-3 text-dark fw-semibold mb-5">WHO I AM?</h3>
-                <div class="info">
-                  <div class="info-row">
-                    <div class="col-lg-6">
-                      <strong class="info-label">Full Name:</strong>
-                      <span class="info-value">Kryzel Rica Ebale Bulagsac</span>
-                    </div>
-                    <div class="col-lg-6">
-                      <strong class="info-label">Nickname:</strong>
-                      <span class="nickname">
-                        <span class="word"></span>
-                        <span class="word"></span>
-                        <span class="word"></span>
-                      </span>
+            <div class="ms-auto d-none d-lg-block">
+              <a class="colored-btn" href="contact.html"> HIRE ME </a>
+            </div>
+
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbar-collapse-toggler"
+              aria-controls="navbar-collapse-toggler"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </nav>
+      </header>
+
+      <main>
+        <!-- ABOUT ME-->
+        <section id="about" class="section about-section">
+          <div class="container">
+            <div class="row gy-5 align-items-center">
+              <div class="col-lg-4 text-center profile-area">
+                <div class="profile-frame">
+                  <span class="frame-line frame-line-1"></span>
+                  <span class="frame-line frame-line-2"></span>
+
+                  <img
+                    id="profile"
+                    src="assets/image/my-profile.jpg"
+                    alt="Kryzel Rica Ebale Bulagsac"
+                  />
+                </div>
+              </div>
+
+              <div class="col-lg-8 ps-lg-5">
+                <div class="about-text">
+                  <!-- Section Title -->
+                  <h3 class="h1 mb-3 text-dark fw-semibold mb-5">ABOUT ME</h3>
+                  <div class="info">
+                    <div class="info-row">
+                      <div class="col-lg-6">
+                        <strong class="info-label"> Full Name: </strong>
+                        <span class="info-value">
+                          Kryzel Rica Ebale Bulagsac
+                        </span>
+                      </div>
+                      <div class="col-lg-6">
+                        <strong class="info-label"> Role: </strong>
+                        <span class="nickname">
+                          <span class="word"></span>
+                          <span class="word"></span>
+                          <span class="word"></span>
+                        </span>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <p class="py-3">
-                  I’m a <b>Bachelor of Science in Information System</b> student
-                  at Caraga State University, passionate about technology,
-                  creativity, and continuous learning. With a solid background
-                  in frontend development and graphic design. Beyond
-                  tech, I have a deep passion for
-                  <b>art, design, and innovation</b>, which fuels my creativity
-                  in both coding and visual storytelling.
-                </p>
-              </div>
-
-              <div class="row g-4 text-start pt-4">
-                <div class="interest-title">
-                  <h6><strong>Interest</strong></h6>
-                  <div class="underline"></div>
-                </div>
-                <div class="col-md-4 d-flex align-items-center hobby">
-                  <div class="icon"><i class="fas fa-camera"></i></div>
-                  <p class="mb-0">Photography</p>
-                </div>
-                <div class="col-md-4 d-flex align-items-center hobby">
-                  <div class="icon"><i class="fas fa-film"></i></div>
-                  <p class="mb-0">Movie</p>
-                </div>
-                <div class="col-md-4 d-flex align-items-center hobby">
-                  <div class="icon"><i class="fas fa-guitar"></i></div>
-                  <p class="mb-0">Playing Instrument</p>
+                  <p class="py-3">
+                    I’m a
+                    <b>Bachelor of Science in Information Systems</b>
+                    graduate from Caraga State University with a passion for
+                    technology, design, and continuous learning. I have experience
+                    creating responsive and user-friendly websites using HTML,
+                    CSS, Bootstrap, and JavaScript, along with experience using
+                    Microsoft Office and graphic design tools. I enjoy
+                    transforming ideas into clean, functional digital experiences
+                    and continuously improving my technical skills.
+                  </p>
                 </div>
 
-                <div class="col-md-4 d-flex align-items-center hobby">
-                  <div class="icon"><i class="fas fa-plane"></i></div>
-                  <p class="mb-0">Travel</p>
-                </div>
-              </div>
-            </div>
+                <div class="what-i-do-section">
+
+    <div class="interest-title">
+      <h6>
+        <strong>What I Do</strong>
+      </h6>
+      <div class="underline"></div>
+    </div>
+
+    <p class="what-i-do-subtitle">
+      Hover over each area to explore what I work with.
+    </p>
+
+    <div class="what-i-do-grid">
+
+
+      <!-- WEB DEVELOPMENT -->
+      <div class="work-card">
+        <div class="work-card-main">
+          <div class="work-icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <div class="work-title">
+            <h5>Web Development</h5>
+            <span>Frontend Development</span>
           </div>
         </div>
-      </section>
-    </main>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills section light-background">
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2 id="skill" class="pt-5"><b>Skills</b></h2>
-        <p>
-          "Here are some of the technical skills I have developed through my
-          studies and projects."
-        </p>
-      </div>
-      <!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row skills-content skills-animation">
-          <div class="progress">
-            <span class="skill"><span>HTML</span> <i class="val">100%</i></span>
-            <div class="progress-bar-wrap">
-              <div
-                class="progress-bar"
-                role="progressbar"
-                aria-valuenow="100"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              ></div>
-            </div>
-          </div>
-
-          <div class="progress">
-            <span class="skill"><span>CSS</span> <i class="val">90%</i></span>
-            <div class="progress-bar-wrap">
-              <div
-                class="progress-bar"
-                role="progressbar"
-                aria-valuenow="90"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              ></div>
-            </div>
-          </div>
-
-          <div class="progress">
-            <span class="skill"
-              ><span>Bootstrap</span> <i class="val">85%</i></span
-            >
-            <div class="progress-bar-wrap">
-              <div
-                class="progress-bar"
-                role="progressbar"
-                aria-valuenow="85"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              ></div>
-            </div>
-          </div>
-
-          <div class="progress">
-            <span class="skill"
-              ><span>Javascript</span> <i class="val">50%</i></span
-            >
-            <div class="progress-bar-wrap">
-              <div
-                class="progress-bar"
-                role="progressbar"
-                aria-valuenow="50"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              ></div>
-            </div>
+        <div class="work-card-details">
+          <p>
+            Creating responsive and user-friendly websites
+            with clean and functional interfaces.
+          </p>
+          <div class="work-tags">
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>Bootstrap</span>
+            <span>JavaScript</span>
           </div>
         </div>
       </div>
-    </section>
-    <!-- /Skills Section -->
 
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/custom/script.js"></script>
-  </body>
-</html>
+      <!-- GRAPHIC DESIGN -->
+      <div class="work-card">
+        <div class="work-card-main">
+          <div class="work-icon">
+            <i class="fas fa-palette"></i>
+          </div>
+          <div class="work-title">
+            <h5>Graphic Design</h5>
+            <span>Visual Design</span>
+          </div>
+        </div>
+        <div class="work-card-details">
+          <p>
+            Creating clean and engaging visual designs
+            with attention to layout and presentation.
+          </p>
+          <div class="work-tags">
+            <span>Layout Design</span>
+            <span>Digital Graphics</span>
+            <span>Visual Design</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- UI UX DESIGN -->
+      <div class="work-card">
+        <div class="work-card-main">
+          <div class="work-icon">
+            <i class="fas fa-pen-ruler"></i>
+          </div>
+          <div class="work-title">
+            <h5>UI/UX Design</h5>
+            <span>User-Centered Design</span>
+          </div>
+        </div>
+        <div class="work-card-details">
+          <p>
+            Designing simple and intuitive interfaces
+            with a focus on usability and user experience.
+          </p>
+          <div class="work-tags">
+            <span>Wireframing</span>
+            <span>UI Design</span>
+            <span>UX Design</span>
+            <span>Responsive Design</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- MICROSOFT OFFICE -->
+      <div class="work-card">
+        <div class="work-card-main">
+          <div class="work-icon">
+            <i class="fas fa-file-excel"></i>
+          </div>
+          <div class="work-title">
+            <h5>Microsoft Office</h5>
+            <span>Productivity Tools</span>
+          </div>
+        </div>
+        <div class="work-card-details">
+          <p>
+            Creating professional documents,
+            spreadsheets, presentations, and organized content.
+          </p>
+          <div class="work-tags">
+            <span>Word</span>
+            <span>Excel</span>
+            <span>PowerPoint</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+                </div>
+                <!-- END WHAT I DO -->
+              </div>
+              <!-- END ABOUT INFORMATION -->
+            </div>
+          </div>
+        </section>
+        <!-- END ABOUT ME SECTION -->
+      </main>
+
+      <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <script src="assets/custom/script.js"></script>
+    </body>
+  </html>
