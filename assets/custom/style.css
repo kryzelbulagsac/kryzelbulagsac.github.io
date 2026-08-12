@@ -190,6 +190,10 @@ a:hover {
 /*--------------------------------------------------------------
 # HOME SECTION
 --------------------------------------------------------------*/
+.home-page {
+    overflow: hidden;
+}
+
 .main {
   position: relative;
   z-index: 1;
@@ -198,9 +202,75 @@ a:hover {
 .home-section {
   position: relative;
   overflow: hidden;
-  padding-top: 150px;
-  padding-bottom: 100px;
+  min-height: calc(100vh - 80px);
+  padding-top: 40px;
+  padding-bottom: 40px;
+  box-sizing: border-box;
 }
+
+/*--------------------------------------------------------------
+# MOVING BACKGROUND LINES
+--------------------------------------------------------------*/
+
+.background-lines {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.background-lines span {
+  position: absolute;
+  width: 2px;
+  height: 180%;
+  background: rgba(0, 123, 255, 0.08);
+  transform: rotate(25deg);
+  animation: moveLines 8s linear infinite;
+}
+
+.background-lines span:nth-child(1) {
+  left: 5%;
+  animation-delay: 0s;
+}
+
+.background-lines span:nth-child(2) {
+  left: 20%;
+  animation-delay: -2s;
+}
+
+.background-lines span:nth-child(3) {
+  left: 35%;
+  animation-delay: -4s;
+}
+
+.background-lines span:nth-child(4) {
+  left: 50%;
+  animation-delay: -6s;
+}
+
+.background-lines span:nth-child(5) {
+  left: 65%;
+  animation-delay: -3s;
+}
+
+.background-lines span:nth-child(6) {
+  left: 80%;
+  animation-delay: -5s;
+}
+
+@keyframes moveLines {
+  from {
+    transform: translateY(-30%) rotate(25deg);
+  }
+
+  to {
+    transform: translateY(30%) rotate(25deg);
+  }
+}
+
 
 @media (max-width: 767px) {
   .home-section {
@@ -315,7 +385,7 @@ a:hover {
 }
 
 .typing-text::after {
-  content: "Student";
+  content: "Virtual Assistant";
   display: inline-block;
   border-right: 3px solid black;
   animation: typing 6s steps(12) infinite, blink 0.5s infinite;
@@ -324,11 +394,11 @@ a:hover {
 @keyframes typing {
   0%,
   33% {
-    content: "Student";
+    content: "Graphic Designer";
   }
   34%,
   66% {
-    content: "Designer";
+    content: "Web Developer";
   }
 }
 
@@ -339,13 +409,14 @@ a:hover {
 }
 
 .home-image img {
-  height: 450px;
-  width: 450px;
+  height: 600px;
+  width: 700px;
   object-fit: cover;
-  border-radius: 50%;
-  border: 2px solid #cd7672;
   position: relative;
-  z-index: -2;
+  z-index: 1;
+
+  transition: transform 0.15s ease-out;
+  cursor: pointer;
 }
 
 @media (max-width: 767px) {
@@ -354,6 +425,7 @@ a:hover {
     width: 400px;
   }
 }
+
 
 /*--------------------------------------------------------------
 # ABOUT ME
@@ -430,7 +502,7 @@ a:hover {
 @keyframes typewriter {
   0%,
   100% {
-    content: "Kryzel";
+    content: "Web Development";
   }
   33% {
     content: "Rica";
