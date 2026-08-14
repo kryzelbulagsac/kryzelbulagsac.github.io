@@ -2,6 +2,9 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 400;
   color: #555;
+
+  margin: 0;
+  min-height: 100vh;
 }
 
 img {
@@ -191,56 +194,31 @@ a:hover {
 # HOME SECTION
 --------------------------------------------------------------*/
 .home-page {
-  overflow: hidden;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .main {
   position: relative;
   z-index: 1;
+  width: 100%;
+  min-height: 100vh;
 }
 
 .home-section {
   position: relative;
   width: 100%;
-  min-height: calc(100vh - 80px);
 
-  padding-top: 40px;
+  min-height: 100vh;
+
+  padding-top: 110px;
   padding-bottom: 40px;
 
   box-sizing: border-box;
 
   display: flex;
   align-items: center;
-}
-
-/*--------------------------------------------------------------
-# HOME PAGE - LARGE SCREEN FIX
---------------------------------------------------------------*/
-
-@media (min-width: 1400px) {
-  .home-page .home-section {
-    min-height: 700px;
-    height: auto;
-  }
-
-  .home-page .home-section .container {
-    max-width: 1300px;
-  }
-
-  .home-page .home-image img {
-    width: 700px;
-    height: 600px;
-  }
-}
-
-@media (min-width: 1600px) {
-  .home-page .home-section {
-    min-height: 750px;
-  }
-
-  .home-page .home-section .container {
-    max-width: 1400px;
-  }
 }
 
 /*--------------------------------------------------------------
@@ -385,12 +363,6 @@ a:hover {
   display: inline-flex;
 }
 
-@media (max-width: 1200px) {
-  .home-section .home-intro h3 {
-    font-size: 60px;
-  }
-}
-
 @media (max-width: 767px) {
   .home-section .home-intro h3 {
     margin: 0 0 25px;
@@ -447,7 +419,9 @@ a:hover {
 .home-image img {
   height: 600px;
   width: 700px;
+  max-width: 100%;
   object-fit: cover;
+
   position: relative;
   z-index: 1;
 
