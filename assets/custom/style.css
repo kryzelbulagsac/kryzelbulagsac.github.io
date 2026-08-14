@@ -52,7 +52,7 @@ a:hover {
 }
 
 .main-header .navbar-brand span {
-  color: #E8A6A3;
+  color: #e8a6a3;
   border: 0px;
 }
 
@@ -167,7 +167,7 @@ a:hover {
   text-transform: uppercase;
   transition: ease all 0.3s;
   display: inline-block;
-  background:#eba49c;
+  background: #eba49c;
   color: #fff;
   box-shadow: 6px 6px 0 -1px #373737;
 }
@@ -191,7 +191,7 @@ a:hover {
 # HOME SECTION
 --------------------------------------------------------------*/
 .home-page {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .main {
@@ -201,11 +201,46 @@ a:hover {
 
 .home-section {
   position: relative;
-  overflow: hidden;
+  width: 100%;
   min-height: calc(100vh - 80px);
+
   padding-top: 40px;
   padding-bottom: 40px;
+
   box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+}
+
+/*--------------------------------------------------------------
+# HOME PAGE - LARGE SCREEN FIX
+--------------------------------------------------------------*/
+
+@media (min-width: 1400px) {
+  .home-page .home-section {
+    min-height: 700px;
+    height: auto;
+  }
+
+  .home-page .home-section .container {
+    max-width: 1300px;
+  }
+
+  .home-page .home-image img {
+    width: 700px;
+    height: 600px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .home-page .home-section {
+    min-height: 750px;
+  }
+
+  .home-page .home-section .container {
+    max-width: 1400px;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -270,7 +305,6 @@ a:hover {
     transform: translateY(30%) rotate(25deg);
   }
 }
-
 
 @media (max-width: 767px) {
   .home-section {
@@ -365,7 +399,7 @@ a:hover {
 }
 
 .home-section .home-intro h3 span {
-  border-bottom: 2px solid #E8A6A3;
+  border-bottom: 2px solid #e8a6a3;
 }
 
 .home-section .home-intro h6 {
@@ -388,7 +422,9 @@ a:hover {
   content: "Virtual Assistant";
   display: inline-block;
   border-right: 3px solid black;
-  animation: typing 6s steps(12) infinite, blink 0.5s infinite;
+  animation:
+    typing 6s steps(12) infinite,
+    blink 0.5s infinite;
 }
 
 @keyframes typing {
@@ -426,7 +462,6 @@ a:hover {
   }
 }
 
-
 /*--------------------------------------------------------------
 # ABOUT ME
 --------------------------------------------------------------*/
@@ -459,7 +494,6 @@ a:hover {
   overflow: hidden;
 }
 
-
 /* Decorative diagonal lines */
 
 .about-section::before {
@@ -473,18 +507,16 @@ a:hover {
   top: 0;
   left: 0;
 
-  background:
-    repeating-linear-gradient(
-      -25deg,
-      transparent,
-      transparent 110px,
-      rgba(205, 118, 114, 0.045) 111px,
-      rgba(205, 118, 114, 0.045) 112px
-    );
+  background: repeating-linear-gradient(
+    -25deg,
+    transparent,
+    transparent 110px,
+    rgba(205, 118, 114, 0.045) 111px,
+    rgba(205, 118, 114, 0.045) 112px
+  );
 
   pointer-events: none;
 }
-
 
 /* Large decorative diagonal shape */
 
@@ -499,13 +531,12 @@ a:hover {
   top: -350px;
   right: -250px;
 
-  border: 1px solid rgba(205, 118, 114, 0.10);
+  border: 1px solid rgba(205, 118, 114, 0.1);
 
   transform: rotate(35deg);
 
   pointer-events: none;
 }
-
 
 /* Keep content above background */
 
@@ -513,7 +544,6 @@ a:hover {
   position: relative;
   z-index: 2;
 }
-
 
 /*--------------------------------------------------------------
 # ABOUT TEXT
@@ -530,7 +560,6 @@ a:hover {
   display: inline-block;
   border-bottom: 2px solid #cd7672;
 }
-
 
 /*--------------------------------------------------------------
 # PROFILE IMAGE
@@ -549,7 +578,6 @@ a:hover {
   position: relative;
 }
 
-
 .profile-frame {
   position: relative;
 
@@ -558,7 +586,6 @@ a:hover {
 
   margin: 0 auto;
 }
-
 
 /* Photo */
 
@@ -574,8 +601,7 @@ a:hover {
 
   border-radius: 3px;
 
-  box-shadow:
-    0 15px 35px rgba(0, 0, 0, 0.10);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
 
   z-index: 2;
 
@@ -583,7 +609,6 @@ a:hover {
     transform 0.4s ease,
     box-shadow 0.4s ease;
 }
-
 
 /* Salmon decorative frame */
 
@@ -602,10 +627,8 @@ a:hover {
 
   z-index: 1;
 
-  transition:
-    transform 0.4s ease;
+  transition: transform 0.4s ease;
 }
-
 
 /* Olive decorative frame */
 
@@ -625,21 +648,17 @@ a:hover {
   z-index: 0;
 }
 
-
 /* Photo hover */
 
 .profile-frame:hover #profile {
   transform: translate(-4px, -4px);
 
-  box-shadow:
-    0 20px 40px rgba(0, 0, 0, 0.14);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.14);
 }
-
 
 .profile-frame:hover::before {
   transform: translate(5px, 5px);
 }
-
 
 /*--------------------------------------------------------------
 # PERSONAL INFORMATION
@@ -669,7 +688,6 @@ a:hover {
   font-weight: bold;
 }
 
-
 /*--------------------------------------------------------------
 # CAREER FOCUS ANIMATION
 --------------------------------------------------------------*/
@@ -692,7 +710,6 @@ a:hover {
 }
 
 @keyframes typewriter {
-
   0%,
   100% {
     content: "Web Development";
@@ -704,12 +721,10 @@ a:hover {
 }
 
 @keyframes blink {
-
   50% {
     border-color: transparent;
   }
 }
-
 
 /*--------------------------------------------------------------
 # WHAT I DO TITLE
@@ -736,8 +751,7 @@ a:hover {
   height: 2px;
   background-color: #cd7672;
 
-  transition:
-    width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
 }
 
 .interest-title:hover .underline {
@@ -751,7 +765,6 @@ a:hover {
   margin-top: 30px;
 }
 
-
 /* Subtitle */
 
 .what-i-do-subtitle {
@@ -763,7 +776,6 @@ a:hover {
   font-size: 13px;
 }
 
-
 /* Grid */
 
 .what-i-do-grid {
@@ -773,7 +785,6 @@ a:hover {
 
   gap: 15px;
 }
-
 
 /*--------------------------------------------------------------
 # WORK CARD
@@ -803,7 +814,6 @@ a:hover {
     min-height 0.35s ease;
 }
 
-
 /* Main card content */
 
 .work-card-main {
@@ -813,7 +823,6 @@ a:hover {
 
   gap: 14px;
 }
-
 
 /*--------------------------------------------------------------
 # ICON
@@ -843,7 +852,6 @@ a:hover {
     transform 0.3s ease;
 }
 
-
 /*--------------------------------------------------------------
 # TITLE
 --------------------------------------------------------------*/
@@ -860,7 +868,6 @@ a:hover {
   transition: color 0.3s ease;
 }
 
-
 .work-title span {
   display: block;
 
@@ -870,7 +877,6 @@ a:hover {
 
   font-size: 11px;
 }
-
 
 /*--------------------------------------------------------------
 # HIDDEN DETAILS
@@ -891,7 +897,6 @@ a:hover {
     transform 0.3s ease;
 }
 
-
 .work-card-details p {
   margin-top: 16px;
 
@@ -904,7 +909,6 @@ a:hover {
   line-height: 1.6;
 }
 
-
 /*--------------------------------------------------------------
 # TAGS
 --------------------------------------------------------------*/
@@ -916,7 +920,6 @@ a:hover {
 
   gap: 6px;
 }
-
 
 .work-tags span {
   padding: 5px 9px;
@@ -932,7 +935,6 @@ a:hover {
   font-weight: 600;
 }
 
-
 /*--------------------------------------------------------------
 # HOVER
 --------------------------------------------------------------*/
@@ -944,24 +946,18 @@ a:hover {
 
   border-color: #cd7672;
 
-  box-shadow:
-    0 15px 30px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
 }
-
 
 .work-card:hover .work-icon {
   background-color: #cd7672;
 
-  transform:
-    rotate(-5deg)
-    scale(1.08);
+  transform: rotate(-5deg) scale(1.08);
 }
-
 
 .work-card:hover .work-title h5 {
   color: #cd7672;
 }
-
 
 .work-card:hover .work-card-details {
   max-height: 130px;
@@ -984,7 +980,6 @@ a:hover {
   line-height: 1.5;
 }
 
-
 /*--------------------------------------------------------------
 # WHAT I DO GRID
 --------------------------------------------------------------*/
@@ -998,7 +993,6 @@ a:hover {
 
   width: 100%;
 }
-
 
 /*--------------------------------------------------------------
 # WORK CARD
@@ -1027,7 +1021,6 @@ a:hover {
     min-height 0.35s ease;
 }
 
-
 /*--------------------------------------------------------------
 # WORK CARD MAIN CONTENT
 --------------------------------------------------------------*/
@@ -1038,7 +1031,6 @@ a:hover {
 
   gap: 13px;
 }
-
 
 /*--------------------------------------------------------------
 # WORK CARD ICON
@@ -1067,7 +1059,6 @@ a:hover {
     transform 0.35s ease;
 }
 
-
 /*--------------------------------------------------------------
 # WORK CARD TITLE
 --------------------------------------------------------------*/
@@ -1080,10 +1071,8 @@ a:hover {
   font-size: 15px;
   font-weight: 600;
 
-  transition:
-    color 0.3s ease;
+  transition: color 0.3s ease;
 }
-
 
 /* Small description under title */
 
@@ -1097,13 +1086,11 @@ a:hover {
   font-size: 11px;
 }
 
-
 /*--------------------------------------------------------------
 # HIDDEN WORK DETAILS
 --------------------------------------------------------------*/
 
 .work-card-details {
-
   /*
    * Hidden before hover
    */
@@ -1121,7 +1108,6 @@ a:hover {
     transform 0.35s ease;
 }
 
-
 /* Description */
 
 .work-card-details p {
@@ -1134,7 +1120,6 @@ a:hover {
 
   line-height: 1.6;
 }
-
 
 /*--------------------------------------------------------------
 # TECHNOLOGY TAGS
@@ -1168,13 +1153,11 @@ a:hover {
     color 0.25s ease;
 }
 
-
 /*--------------------------------------------------------------
 # WORK CARD HOVER
 --------------------------------------------------------------*/
 
 .work-card:hover {
-
   /*
    * Slight movement creates a more
    * interactive feeling.
@@ -1186,8 +1169,7 @@ a:hover {
    */
   border-color: #cd7672;
 
-  box-shadow:
-    0 12px 25px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
 
   /*
    * Give the card room for its
@@ -1196,17 +1178,13 @@ a:hover {
   min-height: 185px;
 }
 
-
 /* Icon hover */
 
 .work-card:hover .icon {
   background-color: #cd7672;
 
-  transform:
-    rotate(-5deg)
-    scale(1.08);
+  transform: rotate(-5deg) scale(1.08);
 }
-
 
 /* Title hover */
 
@@ -1214,11 +1192,9 @@ a:hover {
   color: #cd7672;
 }
 
-
 /* Reveal information */
 
 .work-card:hover .work-card-details {
-
   max-height: 130px;
 
   opacity: 1;
@@ -1226,13 +1202,11 @@ a:hover {
   transform: translateY(0);
 }
 
-
 /*--------------------------------------------------------------
 # CARD BOTTOM ACCENT
 --------------------------------------------------------------*/
 
 .work-card::after {
-
   content: "";
 
   position: absolute;
@@ -1245,55 +1219,45 @@ a:hover {
 
   background-color: #cd7672;
 
-  border-radius:
-    5px 5px 0 0;
+  border-radius: 5px 5px 0 0;
 
-  transition:
-    width 0.35s ease;
+  transition: width 0.35s ease;
 }
 
 .work-card:hover::after {
   width: calc(100% - 34px);
 }
 
-
 /*--------------------------------------------------------------
 # TAG HOVER
 --------------------------------------------------------------*/
 
 .work-tags span:hover {
-
   background-color: #cd7672;
 
   color: #ffffff;
 }
-
 
 /*--------------------------------------------------------------
 # TABLET
 --------------------------------------------------------------*/
 
 @media (max-width: 991px) {
-
   .what-i-do-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-
 }
-
 
 /*--------------------------------------------------------------
 # MOBILE
 --------------------------------------------------------------*/
 
 @media (max-width: 767px) {
-
   .what-i-do-grid {
     grid-template-columns: 1fr;
 
     gap: 12px;
   }
-
 
   /*
    * Phones don't have a traditional
@@ -1305,7 +1269,6 @@ a:hover {
   }
 
   .work-card-details {
-
     max-height: 130px;
 
     opacity: 1;
@@ -1313,41 +1276,33 @@ a:hover {
     transform: translateY(0);
   }
 
-
   .work-card:hover {
     min-height: 170px;
 
     transform: none;
   }
 
-
   .work-card:hover .icon {
     transform: none;
   }
 
-
   .work-card::after {
     width: calc(100% - 34px);
   }
-
 }
-
 
 /*--------------------------------------------------------------
 # SMALL MOBILE
 --------------------------------------------------------------*/
 
 @media (max-width: 480px) {
-
   .what-i-do-section {
     margin-top: 30px;
   }
 
-
   .work-card {
     padding: 15px;
   }
-
 
   .work-card .icon {
     width: 42px;
@@ -1358,21 +1313,17 @@ a:hover {
     font-size: 16px;
   }
 
-
   .work-card h5 {
     font-size: 14px;
   }
-
 
   .work-card-main span {
     font-size: 10px;
   }
 
-
   .work-card-details p {
     font-size: 11px;
   }
-
 }
 /*--------------------------------------------------------------
 # ANIMATED BACKGROUND ACCENT
@@ -1396,27 +1347,18 @@ a:hover {
   animation: aboutLineMove 6s ease-in-out infinite;
 }
 
-
 @keyframes aboutLineMove {
-
   0% {
-    transform:
-      translateX(0)
-      rotate(-25deg);
+    transform: translateX(0) rotate(-25deg);
   }
 
   50% {
-    transform:
-      translateX(-80px)
-      rotate(-25deg);
+    transform: translateX(-80px) rotate(-25deg);
   }
 
   100% {
-    transform:
-      translateX(0)
-      rotate(-25deg);
+    transform: translateX(0) rotate(-25deg);
   }
-
 }
 
 /*--------------------------------------------------------------
@@ -1424,35 +1366,29 @@ a:hover {
 --------------------------------------------------------------*/
 
 @media (max-width: 767px) {
-
   .profile-frame {
     width: 260px;
     height: 310px;
   }
-
 
   .profile-frame #profile {
     width: 260px;
     height: 310px;
   }
 
-
   .profile-frame::before {
     width: 260px;
     height: 310px;
   }
-
 
   .profile-frame::after {
     width: 260px;
     height: 310px;
   }
 
-
   .what-i-do-grid {
     grid-template-columns: 1fr;
   }
-
 
   /*
    * Since phones don't have hover,
@@ -1463,7 +1399,6 @@ a:hover {
     min-height: 175px;
   }
 
-
   .work-card-details {
     max-height: 130px;
 
@@ -1472,13 +1407,11 @@ a:hover {
     transform: translateY(0);
   }
 
-
   .work-card:hover {
     min-height: 175px;
 
     transform: none;
   }
-
 }
 
 /*--------------------------------------------------------------
@@ -1568,19 +1501,19 @@ a:hover {
 
 .section-heading h2 {
   display: inline-block;
-  border-bottom: 2px solid #A65551;
+  border-bottom: 2px solid #a65551;
   padding-bottom: 13px;
 }
 
 .portfolio-box .project-img {
   position: relative;
   border: 2px solid #cd7672;
-  box-shadow: 0 0 0 0 #A65551;
+  box-shadow: 0 0 0 0 #a65551;
   transition: 0.3s;
 }
 
 .portfolio-box .project-img:hover {
-  box-shadow: 5px 5px 0 0 #A65551;
+  box-shadow: 5px 5px 0 0 #a65551;
 }
 
 .portfolio-box .porfolio-text span {
@@ -1619,7 +1552,7 @@ a:hover {
 }
 
 .portfolio-details .portfolio-info hr {
-  color: #A65551;
+  color: #a65551;
 }
 
 .portfolio-details .portfolio-info h3 {
@@ -1690,7 +1623,9 @@ a:hover {
   color: white;
   font-size: 22px;
   text-decoration: none;
-  transition: background 0.3s ease, transform 0.2s;
+  transition:
+    background 0.3s ease,
+    transform 0.2s;
 }
 
 .icon:hover {
