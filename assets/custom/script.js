@@ -56,3 +56,59 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+// =========================
+// WEB3FORMS CONTACT FORM
+// =========================
+
+const contactForm = document.getElementById("contact-form");
+const formResult = document.getElementById("form-result");
+
+if (contactForm) {
+  contactForm.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const submitBtn = contactForm.querySelector(
+      'button[type="submit"]'
+    );
+
+    const originalText = submitBtn.textContent;
+
+    submitBtn.textContent = "Sending...";
+    submitBtn.disabled = true;
+
+    formResult.textContent = "";
+
+    try {
+      const formData = new FormData(contactForm);
+
+      const response = await fetch(
+        "https://api.web3forms.com/submit",
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        formResult.textContent =
+          "Thank you! Your message has been sent successfully.";
+
+        contactForm.reset();
+      } else {
+        formResult.textContent =
+          data.message || "Something went wrong. Please try again.";
+      }
+    } catch (error) {
+      console.error(error);
+
+      formResult.textContent =
+        "Unable to send your message. Please try again later.";
+    } finally {
+      submitBtn.textContent = originalText;
+      submitBtn.disabled = false;
+    }
+  });
+}
