@@ -3,29 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>
-      Phil Arts Application Details | Kryzel Portfolio | Personal Website
+      Phil Arts Application | Kryzel Portfolio | Personal Website
     </title>
+
     <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/custom/style.css" />
   </head>
-  <body>
-    <!-- HEADER-->
+
+  <body class="project-page">
+
+    <!-- HEADER -->
     <header class="main-header">
       <nav class="navbar header-nav navbar-expand-lg">
         <div class="container">
-          <!--Brand Name/Logo -->
-          <a href="#" class="navbar-brand">
+
+          <!-- Brand Name / Logo -->
+          <a href="index.html" class="navbar-brand">
             <h4 class="mb-0">
               <b>Kryzel <span class="text-primary">Rica</span></b>
             </h4>
           </a>
+
           <!-- Navigation Menu -->
           <div
             class="collapse navbar-collapse justify-content-end"
             id="navbar-collapse-toggler"
           >
             <ul class="navbar-nav mx-auto">
+
               <li>
                 <a href="index.html" class="nav-link">Home</a>
               </li>
@@ -39,21 +46,31 @@
               </li>
 
               <li>
-                <a href="portfolio.html" class="nav-link active">Portfolio</a>
+                <a href="portfolio.html" class="nav-link active">
+                  Portfolio
+                </a>
               </li>
 
               <li class="d-lg-none mt-2">
-                <a class="colored-btn d-block text-center" href="contact.html"
-                  >Contact Now!</a
+                <a
+                  class="colored-btn d-block text-center"
+                  href="contact.html"
                 >
+                  Contact Now!
+                </a>
               </li>
+
             </ul>
           </div>
-          <!--COntact Button-->
+
+          <!-- Contact Button -->
           <div class="ms-auto d-none d-lg-block">
-            <a class="colored-btn" href="contact.html">Contact Now!</a>
+            <a class="colored-btn" href="contact.html">
+              Contact Now!
+            </a>
           </div>
-          <!--Mobile Menu Toggle-->
+
+          <!-- Mobile Menu Toggle -->
           <button
             class="navbar-toggler"
             type="button"
@@ -63,116 +80,202 @@
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <!-- Icon representation for the toggle -->
             <span></span>
             <span></span>
             <span></span>
           </button>
+
         </div>
       </nav>
     </header>
 
-    <section id="portfolio-details" class="portfolio-details section">
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row gy-4">
-          <div class="col-lg-7">
-            <div id="carouselExampleIndicators" class="carousel slide">
-              <div class="carousel-indicators">
-                <button
-                  type="button"
-                  data-bs-target="#carouselExampleIndicators"
-                  data-bs-slide-to="0"
-                  class="active"
-                  aria-current="true"
-                  aria-label="Slide 1"
-                ></button>
-                <button
-                  type="button"
-                  data-bs-target="#carouselExampleIndicators"
-                  data-bs-slide-to="1"
-                  aria-label="Slide 2"
-                ></button>
-                <button
-                  type="button"
-                  data-bs-target="#carouselExampleIndicators"
-                  data-bs-slide-to="2"
-                  aria-label="Slide 3"
-                ></button>
-              </div>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img
-                    src="assets/image/philarts/project_1.png"
-                    class="d-block w-100"
-                    alt="..."
-                  />
-                </div>
 
-                <div class="carousel-item">
-                  <img
-                    src="assets/image/philarts/project_2.png"
-                    class="d-block w-100"
-                    alt="..."
-                  />
-                </div>
-              </div>
-              <button
-                class="carousel-control-prev"
-                type="button"
-                data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="prev"
-              >
-                <span
-                  class="carousel-control-prev-icon"
-                  aria-hidden="true"
-                ></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button
-                class="carousel-control-next"
-                type="button"
-                data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="next"
-              >
-                <span
-                  class="carousel-control-next-icon"
-                  aria-hidden="true"
-                ></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-            </div>
-          </div>
+    <!-- PROJECT DETAILS -->
+    <section class="project-details">
 
-          <div class="col-lg-4 pt-5">
-            <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
-              <h3 class="pb-0">Project information</h3>
-              <hr />
-              <ul>
-                <li><strong>Category</strong>: Web App</li>
-                <li><strong>Project date</strong>: December 2024</li>
-                <li><strong>Project Partner</strong>: Stella Mariz Canja & Jericho Luna</li>
-              </ul>
-              <h6><a href="portfolio.html">>>></a></h6>
-            </div>
-            <div
-              class="portfolio-description"
-              data-aos="fade-up"
-              data-aos-delay="300"
-            >
-              <h2><b>Phil Arts Application</b></h2>
-              <p>
-                A mobile application design to empower and connect Filipino
-                Artists, offering tools, resources and platform to showcase
-                their creativity and collaborate within a vibrant artistic
-                community.
-              </p>
-            </div>
-          </div>
+      <div class="container">
+
+        <!-- Top Label -->
+        <div class="project-top-label">
+          <span></span>
+          PORTFOLIO / PROJECT 02
         </div>
-      </div>
-    </section>
-    <!-- /Portfolio Details Section -->
 
+
+        <div class="row align-items-center project-main">
+
+          <!-- PROJECT GALLERY -->
+          <div class="col-lg-7">
+
+            <div class="project-gallery">
+
+              <div
+                id="philArtsCarousel"
+                class="carousel slide"
+              >
+
+                <!-- Carousel Images -->
+                <div class="carousel-inner">
+
+                  <div class="carousel-item active">
+                    <img
+                      src="assets/image/philarts/project_1.png"
+                      alt="Phil Arts Application"
+                    />
+                  </div>
+
+                  <div class="carousel-item">
+                    <img
+                      src="assets/image/philarts/project_2.png"
+                      alt="Phil Arts Application"
+                    />
+                  </div>
+
+                </div>
+
+
+                <!-- Previous Button -->
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#philArtsCarousel"
+                  data-bs-slide="prev"
+                >
+                  <span class="project-arrow">
+                    ←
+                  </span>
+
+                  <span class="visually-hidden">
+                    Previous
+                  </span>
+                </button>
+
+
+                <!-- Next Button -->
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#philArtsCarousel"
+                  data-bs-slide="next"
+                >
+                  <span class="project-arrow">
+                    →
+                  </span>
+
+                  <span class="visually-hidden">
+                    Next
+                  </span>
+                </button>
+
+
+                <!-- Indicators -->
+                <div class="project-indicators">
+
+                  <button
+                    type="button"
+                    data-bs-target="#philArtsCarousel"
+                    data-bs-slide-to="0"
+                    class="active"
+                    aria-current="true"
+                    aria-label="Slide 1"
+                  ></button>
+
+                  <button
+                    type="button"
+                    data-bs-target="#philArtsCarousel"
+                    data-bs-slide-to="1"
+                    aria-label="Slide 2"
+                  ></button>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- PROJECT CONTENT -->
+          <div class="col-lg-5">
+
+            <div class="project-content">
+
+              <!-- Project Label -->
+              <div class="project-label">
+                MOBILE APPLICATION
+              </div>
+
+
+              <!-- Project Title -->
+              <h1>
+                Phil Arts
+                <span>Application</span>
+              </h1>
+
+
+              <!-- Decorative Line -->
+              <div class="project-line"></div>
+
+
+              <!-- Description -->
+              <p class="project-description">
+                A mobile application designed to empower and connect
+                Filipino artists by providing a space to showcase their
+                creativity and connect with other artists.
+              </p>
+
+
+              <!-- Technologies -->
+              <div class="technology-section">
+
+                <h6>
+                  TECHNOLOGIES USED
+                </h6>
+
+                <div class="technology-list">
+
+                  <span>HTML</span>
+
+                  <span>CSS</span>
+
+                  <span>JavaScript</span>
+
+                  <span>Android Studio</span>
+
+                </div>
+
+              </div>
+
+
+              <!-- Back Button -->
+              <a
+                href="portfolio.html"
+                class="project-back"
+              >
+                <span class="back-arrow">←</span>
+                Back to Portfolio
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- Background Decoration -->
+      <div class="project-background-text">
+        PHIL ARTS
+      </div>
+
+    </section>
+
+
+    <!-- Bootstrap JS -->
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
   </body>
 </html>

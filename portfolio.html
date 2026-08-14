@@ -1,23 +1,26 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kryzel Portfolio | Personal Website</title>
+
     <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/custom/style.css" />
   </head>
+
   <body>
-    <!-- HEADER-->
+    <!-- HEADER -->
     <header class="main-header">
       <nav class="navbar header-nav navbar-expand-lg">
         <div class="container">
-          <!--Brand Name/Logo -->
-          <a href="#" class="navbar-brand">
+          <!-- Brand Name / Logo -->
+          <a href="index.html" class="navbar-brand">
             <h4 class="mb-0">
               <b>Kryzel <span class="text-primary">Rica</span></b>
             </h4>
           </a>
+
           <!-- Navigation Menu -->
           <div
             class="collapse navbar-collapse justify-content-end"
@@ -41,17 +44,19 @@
               </li>
 
               <li class="d-lg-none mt-2">
-                <a class="colored-btn d-block text-center" href="contact.html"
-                  >Contact Now!</a
-                >
+                <a class="colored-btn d-block text-center" href="contact.html">
+                  HIRE ME
+                </a>
               </li>
             </ul>
           </div>
-          <!--COntact Button-->
+
+          <!-- Contact Button -->
           <div class="ms-auto d-none d-lg-block">
-            <a class="colored-btn" href="contact.html">Contact Now!</a>
+            <a class="colored-btn" href="contact.html"> HIRE ME </a>
           </div>
-          <!--Mobile Menu Toggle-->
+
+          <!-- Mobile Menu Toggle -->
           <button
             class="navbar-toggler"
             type="button"
@@ -61,7 +66,6 @@
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <!-- Icon representation for the toggle -->
             <span></span>
             <span></span>
             <span></span>
@@ -70,57 +74,73 @@
       </nav>
     </header>
 
-    <!--Portfolio-->
-    <section id="portfolio" class="section bg-gray">
+    <!-- Portfolio -->
+    <section id="portfolio" class="section portfolio-section">
       <div class="container">
-        <div class="section-heading">
+        <!-- Portfolio Heading -->
+        <div class="portfolio-intro">
+          <div class="portfolio-intro"></div>
+
           <h2>Portfolio</h2>
-          <br />
+
+          <p>Some of the projects and designs I have worked on.</p>
         </div>
 
-        <div class="portfolio-box">
-          <h3 class="text-center pb-5 pt-3"><b>Latest Project</b></h3>
-          <div
-            class="row bg-3 gx-3 gy-4 mb-5 pb-lg-3 mb-lg-3 justify-content-around align-items-center"
-          >
-            <div class="col-md-6 col-lg-5">
-              <div class="project-img">
-                <img src="assets/image/project1.jpg" alt="" />
+        <!-- Featured Project: PetWell AI -->
+        <div class="featured-project">
+          <div class="featured-image">
+            <a href="portfolio_pro1.html">
+              <img
+                src="assets/image/project-three.png"
+                alt="PetWell AI project"
+              />
+
+              <div class="image-overlay">
+                <span>View Project Details →</span>
               </div>
-            </div>
-            <div class="col-md-6 col-lg-5">
-              <div class="porfolio-text">
-                <span><a href="portfolio_pro1.html"> Web app</a></span>
-                <h4>Payroll Application</h4>
-                <p>
-                  A payroll management system designed to automate salary
-                  processing, enhance accuracy, and improve efficiency for small
-                  stores with employees.
-                </p>
-              </div>
-            </div>
+            </a>
           </div>
 
-          <div
-            class="row bg-3 gx-3 gy-4 mb-5 pb-lg-3 mb-lg-3 justify-content-around align-items-center"
-          >
-            <div class="col-md-6 col-lg-5">
-              <div class="porfolio-text">
-                <span><a href="portfolio_pro2.html">Web app</a></span>
-                <h4>Phil Arts</h4>
-                <p>
-                  A platform for Filipino digital artists to upload and share
-                  their artwork, while reading and publishing digital stories.
-                </p>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-5">
-              <div class="project-img">
-                <img src="assets/image/Project-two.jpg" alt="" />
-              </div>
-            </div>
+          <div class="featured-content">
+            <span class="project-category"> UI/UX • Mobile Application </span>
+
+            <h3>PetWell AI</h3>
+
+            <p>
+              An AI-powered pet care application designed to help pet owners
+              monitor their pets' health, receive personalized care
+              recommendations, and access convenient veterinary services.
+            </p>
           </div>
         </div>
+
+        <!-- Phil Arts Project -->
+        <div class="second-project">
+          <div class="second-content">
+            <span class="project-category"> UI/UX • Application Design </span>
+
+            <h3>Phil Arts</h3>
+
+            <p>
+              An application concept designed to connect Filipino digital
+              artists by giving them a platform to showcase artwork, explore
+              creative content, and share digital stories.
+            </p>
+          </div>
+
+          <div class="second-image">
+            <a href="portfolio_pro2.html">
+              <img src="assets/image/Project-two.jpg" alt="Phil Arts project" />
+
+              <div class="image-overlay">
+                <span>View Project Details →</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Decorative Text -->
+        <div class="portfolio-decoration">PROJECTS</div>
       </div>
     </section>
 
