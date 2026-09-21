@@ -1471,7 +1471,6 @@ a:hover {
   filter: invert(1);
 }
 
-
 .resume-download-card {
   margin-bottom: 50px;
   padding: 28px 32px;
@@ -1483,13 +1482,15 @@ a:hover {
   overflow: hidden;
 
   /* Hover animation */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 /* Card Hover */
 .resume-download-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.10);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
   border-color: rgba(235, 164, 156, 0.45);
 }
 
@@ -1527,7 +1528,9 @@ a:hover {
   color: #eba49c;
   font-size: 30px;
 
-  transition: transform 0.3s ease, background 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
 }
 
 /* Icon Hover */
@@ -1584,7 +1587,6 @@ a:hover {
   transform: translate(3px, -3px);
 }
 
-
 /*--------------------------------------------------------------
 # RESUME BACKGROUND
 --------------------------------------------------------------*/
@@ -1608,7 +1610,6 @@ a:hover {
   position: relative;
   z-index: 2;
 }
-
 
 /*--------------------------------------------------------------
 # SOFT CIRCLES
@@ -1649,7 +1650,6 @@ a:hover {
   animation-delay: 3s;
 }
 
-
 /*--------------------------------------------------------------
 # SMALL DOTS
 --------------------------------------------------------------*/
@@ -1685,7 +1685,6 @@ a:hover {
   animation-delay: 2s;
 }
 
-
 /*--------------------------------------------------------------
 # ANIMATIONS
 --------------------------------------------------------------*/
@@ -1718,14 +1717,11 @@ a:hover {
   }
 }
 
-
-
 /*--------------------------------------------------------------
 # MOBILE
 --------------------------------------------------------------*/
 
 @media (max-width: 767px) {
-
   .resume-download-card {
     padding: 24px 20px;
   }
@@ -1743,10 +1739,7 @@ a:hover {
     width: 100%;
     justify-content: center;
   }
-
 }
-
-
 
 /*--------------------------------------------------------------
 # Portfolio Section
@@ -1759,8 +1752,6 @@ a:hover {
   padding-top: 25px;
   padding-bottom: 120px;
 }
-
-
 
 /*--------------------------------------------------------------
 # Portfolio Introduction
@@ -1789,7 +1780,6 @@ a:hover {
   margin: 0;
 }
 
-
 /*--------------------------------------------------------------
 # Featured Project
 --------------------------------------------------------------*/
@@ -1802,7 +1792,6 @@ a:hover {
   gap: 65px;
   margin-bottom: 130px;
 }
-
 
 /* Featured Image */
 
@@ -1831,13 +1820,13 @@ a:hover {
   box-shadow: 12px 12px 0 #e8c5c1;
 }
 
-
 /*--------------------------------------------------------------
 # Project Content
 --------------------------------------------------------------*/
 
 .featured-content,
-.second-content {
+.second-content,
+.third-content {
   position: relative;
   z-index: 3;
 }
@@ -1855,7 +1844,8 @@ a:hover {
 }
 
 .featured-content h3,
-.second-content h3 {
+.second-content h3,
+.third-content h3 {
   color: #373737;
   font-size: 38px;
   font-weight: 600;
@@ -1863,13 +1853,13 @@ a:hover {
 }
 
 .featured-content p,
-.second-content p {
+.second-content p,
+.third-content p {
   color: #666;
   font-size: 14px;
   line-height: 1.9;
   margin-bottom: 28px;
 }
-
 
 /*--------------------------------------------------------------
 # View Project Button
@@ -1879,21 +1869,15 @@ a:hover {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-
   color: #b96863;
   background: #f8e9e7;
-
   padding: 11px 20px;
-
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.8px;
-
   border: 1px solid #edcfcc;
   border-radius: 25px;
-
   text-decoration: none;
-
   transition: all 0.3s ease;
 }
 
@@ -1931,7 +1915,6 @@ a:hover {
   margin-bottom: 60px;
 }
 
-
 /* Second Project Image */
 
 .second-image {
@@ -1963,6 +1946,45 @@ a:hover {
   box-shadow: -12px 12px 0 #e8c5c1;
 }
 
+/*--------------------------------------------------------------
+# Third Project
+--------------------------------------------------------------*/
+
+.third-project {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.45fr 0.75fr;
+  align-items: center;
+  gap: 65px;
+  margin-bottom: 130px;
+}
+
+/* Third Image */
+
+.third-image {
+  position: relative;
+  z-index: 2;
+}
+
+.third-image a {
+  display: block;
+}
+
+.third-image img {
+  display: block;
+  width: 100%;
+  height: 430px;
+  object-fit: cover;
+  border: 1px solid #e6d2d0;
+  background: #fff;
+  padding: 12px;
+  transition: all 0.4s ease;
+}
+
+.third-image:hover img {
+  transform: translate(-6px, -6px);
+  box-shadow: 12px 12px 0 #e8c5c1;
+}
 
 /*--------------------------------------------------------------
 # Image Overlay
@@ -1970,41 +1992,32 @@ a:hover {
 
 .image-overlay {
   position: absolute;
-
   left: 12px;
   right: 12px;
   top: 12px;
   bottom: 12px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   background: rgba(55, 55, 55, 0.72);
-
   opacity: 0;
-
   transition: opacity 0.35s ease;
 }
 
 .image-overlay span {
   color: #fff;
-
   font-size: 12px;
   font-weight: 600;
-
   letter-spacing: 1px;
-
   border-bottom: 1px solid #fff;
-
   padding-bottom: 5px;
 }
 
 .featured-image:hover .image-overlay,
-.second-image:hover .image-overlay {
+.second-image:hover .image-overlay,
+.third-image:hover .image-overlay {
   opacity: 1;
 }
-
 
 /*--------------------------------------------------------------
 # Decorative Background Text
@@ -2012,28 +2025,21 @@ a:hover {
 
 .portfolio-decoration {
   position: absolute;
-
   right: -70px;
   bottom: 20px;
-
   color: rgba(166, 85, 81, 0.045);
-
   font-size: 130px;
   font-weight: 700;
-
   letter-spacing: 12px;
-
   pointer-events: none;
   user-select: none;
 }
-
 
 /*--------------------------------------------------------------
 # Portfolio Responsive
 --------------------------------------------------------------*/
 
 @media (max-width: 991px) {
-
   #portfolio {
     padding-top: 80px;
     padding-bottom: 90px;
@@ -2048,7 +2054,8 @@ a:hover {
   }
 
   .featured-project,
-  .second-project {
+  .second-project,
+  .third-project {
     grid-template-columns: 1fr;
     gap: 35px;
   }
@@ -2065,24 +2072,26 @@ a:hover {
     order: 2;
   }
 
+  .third-project {
+    margin-bottom: 90px;
+  }
+
   .featured-image img,
-  .second-image img {
+  .second-image img,
+  .third-image img {
     height: 380px;
   }
 
   .portfolio-decoration {
     font-size: 90px;
   }
-
 }
-
 
 /*--------------------------------------------------------------
 # Mobile
 --------------------------------------------------------------*/
 
 @media (max-width: 767px) {
-
   #portfolio {
     padding-top: 65px;
     padding-bottom: 70px;
@@ -2101,7 +2110,8 @@ a:hover {
   }
 
   .featured-project,
-  .second-project {
+  .second-project,
+  .third-project {
     gap: 25px;
   }
 
@@ -2110,7 +2120,8 @@ a:hover {
   }
 
   .featured-image img,
-  .second-image img {
+  .second-image img,
+  .third-image img {
     height: 250px;
     padding: 8px;
   }
@@ -2123,13 +2134,15 @@ a:hover {
   }
 
   .featured-content h3,
-  .second-content h3 {
+  .second-content h3,
+  .third-content h3 {
     font-size: 29px;
     margin-bottom: 14px;
   }
 
   .featured-content p,
-  .second-content p {
+  .second-content p,
+  .third-content p {
     font-size: 14px;
     line-height: 1.75;
   }
@@ -2146,9 +2159,7 @@ a:hover {
     font-size: 60px;
     letter-spacing: 6px;
   }
-
 }
-
 
 /*==============================================================
 # PETWELL AI PROJECT DETAIL PAGE
@@ -2157,7 +2168,6 @@ a:hover {
 .project-page {
   background: #fcfaf9;
 }
-
 
 /*--------------------------------------------------------------
 # Project Details
@@ -2169,7 +2179,6 @@ a:hover {
   padding: 95px 0 110px;
   overflow: hidden;
 }
-
 
 /*--------------------------------------------------------------
 # Top Label
@@ -2197,7 +2206,6 @@ a:hover {
   background: #d9aaa5;
 }
 
-
 /*--------------------------------------------------------------
 # Main Project Area
 --------------------------------------------------------------*/
@@ -2207,34 +2215,25 @@ a:hover {
   z-index: 2;
 }
 
-
 /*--------------------------------------------------------------
 # Project Gallery
 --------------------------------------------------------------*/
 
 .project-gallery {
   position: relative;
-
   padding: 15px;
-
   background: #ffffff;
-
   border: 1px solid #eadbd8;
-
-  box-shadow:
-    0 25px 60px rgba(96, 65, 62, 0.08);
-
-  transition: transform 0.4s ease,
-              box-shadow 0.4s ease;
+  box-shadow: 0 25px 60px rgba(96, 65, 62, 0.08);
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
 }
 
 .project-gallery:hover {
   transform: translateY(-5px);
-
-  box-shadow:
-    0 30px 70px rgba(96, 65, 62, 0.12);
+  box-shadow: 0 30px 70px rgba(96, 65, 62, 0.12);
 }
-
 
 /*--------------------------------------------------------------
 # Carousel Images
@@ -2242,21 +2241,16 @@ a:hover {
 
 .project-gallery .carousel-inner {
   overflow: hidden;
-
   background: #f7f3f2;
 }
 
 .project-gallery .carousel-item img {
   display: block;
-
   width: 100%;
   height: 500px;
-
   object-fit: contain;
-
   background: #f7f3f2;
 }
-
 
 /*--------------------------------------------------------------
 # Carousel Arrows
@@ -2265,9 +2259,7 @@ a:hover {
 .project-gallery .carousel-control-prev,
 .project-gallery .carousel-control-next {
   width: 55px;
-
   opacity: 0;
-
   transition: opacity 0.3s ease;
 }
 
@@ -2278,33 +2270,22 @@ a:hover {
 
 .project-arrow {
   display: flex;
-
   align-items: center;
   justify-content: center;
-
   width: 38px;
   height: 38px;
-
   border-radius: 50%;
-
   background: rgba(255, 255, 255, 0.94);
-
   color: #a65551;
-
   font-size: 17px;
-
-  box-shadow:
-    0 5px 20px rgba(0, 0, 0, 0.08);
-
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
 }
 
 .project-arrow:hover {
   background: #a65551;
-
   color: #ffffff;
 }
-
 
 /*--------------------------------------------------------------
 # Project Indicators
@@ -2312,39 +2293,28 @@ a:hover {
 
 .project-indicators {
   display: flex;
-
   align-items: center;
   justify-content: center;
-
   gap: 8px;
-
   padding-top: 18px;
 }
 
 .project-indicators button {
   width: 7px;
   height: 7px;
-
   padding: 0;
-
   border: 0;
   border-radius: 50%;
-
   background: #d9c3c0;
-
   opacity: 1;
-
   transition: all 0.3s ease;
 }
 
 .project-indicators button.active {
   width: 25px;
-
   border-radius: 10px;
-
   background: #a65551;
 }
-
 
 /*--------------------------------------------------------------
 # Project Content
@@ -2354,24 +2324,18 @@ a:hover {
   padding-left: 50px;
 }
 
-
 /*--------------------------------------------------------------
 # Project Category
 --------------------------------------------------------------*/
 
 .project-label {
   display: inline-block;
-
   margin-bottom: 20px;
-
   color: #a65551;
-
   font-size: 10px;
   font-weight: 700;
-
   letter-spacing: 2px;
 }
-
 
 /*--------------------------------------------------------------
 # Project Title
@@ -2379,14 +2343,10 @@ a:hover {
 
 .project-content h1 {
   margin: 0;
-
   color: #303030;
-
   font-size: 58px;
   font-weight: 700;
-
   line-height: 1.05;
-
   letter-spacing: -2px;
 }
 
@@ -2394,37 +2354,30 @@ a:hover {
   color: #d48d87;
 }
 
-
 /*--------------------------------------------------------------
 # Project Line
 --------------------------------------------------------------*/
 
-.project-line {
+.graphic-carousel-heading .project-line {
+  margin: 0 460px;
+  padding: 2px;
   width: 48px;
   height: 3px;
-
-  margin: 25px 0;
-
   background: #d9aaa5;
 }
-
 
 /*--------------------------------------------------------------
 # Description
 --------------------------------------------------------------*/
 
-.project-description {
+.graphic-carousel-heading .project-description {
+  padding-top: 15px;
   max-width: 440px;
-
   margin-bottom: 32px;
-
   color: #696969;
-
   font-size: 14px;
-
   line-height: 1.9;
 }
-
 
 /*--------------------------------------------------------------
 # Technology Section
@@ -2436,15 +2389,11 @@ a:hover {
 
 .technology-section h6 {
   margin-bottom: 15px;
-
   color: #444;
-
   font-size: 10px;
   font-weight: 700;
-
   letter-spacing: 1.5px;
 }
-
 
 /*--------------------------------------------------------------
 # Technology Pills
@@ -2452,43 +2401,29 @@ a:hover {
 
 .technology-list {
   display: flex;
-
   flex-wrap: wrap;
-
   gap: 8px;
 }
 
 .technology-list span {
   display: inline-flex;
-
   align-items: center;
-
   padding: 8px 13px;
-
   color: #806461;
-
   background: #f7eeec;
-
   border: 1px solid #ead9d6;
-
   border-radius: 20px;
-
   font-size: 11px;
   font-weight: 500;
-
   transition: all 0.3s ease;
 }
 
 .technology-list span:hover {
   color: #ffffff;
-
   background: #a65551;
-
   border-color: #a65551;
-
   transform: translateY(-2px);
 }
-
 
 /*--------------------------------------------------------------
 # Back Button
@@ -2496,39 +2431,25 @@ a:hover {
 
 .project-back {
   display: inline-flex;
-
   align-items: center;
-
   gap: 9px;
-
-  margin-top: 35px;
-
+  margin-top: 10px;
   color: #a65551;
-
   font-size: 12px;
   font-weight: 600;
-
   text-decoration: none;
-
   transition: all 0.3s ease;
 }
 
 .project-back:hover {
   color: #7e3f3b;
-
   transform: translateX(-4px);
 }
 
 .back-arrow {
   font-size: 17px;
-
   transition: transform 0.3s ease;
 }
-
-.project-back:hover .back-arrow {
-  transform: translateX(-4px);
-}
-
 
 /*--------------------------------------------------------------
 # Background Decoration
@@ -2536,38 +2457,33 @@ a:hover {
 
 .project-background-text {
   position: absolute;
-
   right: -80px;
   bottom: -15px;
-
   color: rgba(166, 85, 81, 0.035);
-
   font-size: 150px;
   font-weight: 700;
-
   letter-spacing: 10px;
-
   pointer-events: none;
   user-select: none;
 }
-
 
 /*--------------------------------------------------------------
 # Tablet
 --------------------------------------------------------------*/
 
 @media (max-width: 991px) {
-
+  .graphic-carousel-section,
   .project-details {
     padding: 75px 0 90px;
   }
 
+  .graphic-carousel-heading,
   .project-content {
     padding-left: 0;
-
     padding-top: 45px;
   }
 
+  .graphic-carousel-heading h1,
   .project-content h1 {
     font-size: 48px;
   }
@@ -2577,31 +2493,28 @@ a:hover {
   }
 
   .project-gallery .carousel-item img {
-    height: 430px;
+    height: auto;
+    max-height: 430px;
   }
 
   .project-background-text {
     font-size: 100px;
-
     right: -50px;
   }
-
 }
-
 
 /*--------------------------------------------------------------
 # Mobile
 --------------------------------------------------------------*/
 
 @media (max-width: 767px) {
-
+  .graphic-carousel-section,
   .project-details {
     padding: 55px 0 70px;
   }
 
   .project-top-label {
     margin-bottom: 30px;
-
     font-size: 9px;
     letter-spacing: 1.5px;
   }
@@ -2611,20 +2524,19 @@ a:hover {
   }
 
   .project-gallery .carousel-item img {
-    height: 330px;
+    height: auto;
+    max-height: 330px;
   }
 
   .project-gallery .carousel-control-prev,
   .project-gallery .carousel-control-next {
     opacity: 1;
-
     width: 45px;
   }
 
   .project-arrow {
     width: 32px;
     height: 32px;
-
     font-size: 14px;
   }
 
@@ -2634,13 +2546,11 @@ a:hover {
 
   .project-label {
     margin-bottom: 15px;
-
     font-size: 9px;
   }
 
   .project-content h1 {
     font-size: 42px;
-
     letter-spacing: -1.5px;
   }
 
@@ -2650,7 +2560,6 @@ a:hover {
 
   .project-description {
     font-size: 13px;
-
     line-height: 1.8;
   }
 
@@ -2660,7 +2569,6 @@ a:hover {
 
   .technology-list span {
     padding: 7px 11px;
-
     font-size: 10px;
   }
 
@@ -2671,15 +2579,10 @@ a:hover {
   .project-background-text {
     right: -60px;
     bottom: 0;
-
     font-size: 65px;
-
     letter-spacing: 5px;
   }
-
 }
-
-
 
 /*--------------------------------------------------------------
 # Contact Section
@@ -2691,7 +2594,6 @@ a:hover {
   padding: 90px 0 100px;
   color: #595959;
 }
-
 
 /*--------------------------------------------------------------
 # Contact Heading
@@ -2725,7 +2627,6 @@ a:hover {
   margin: 0;
 }
 
-
 /*--------------------------------------------------------------
 # Contact Information
 --------------------------------------------------------------*/
@@ -2752,7 +2653,6 @@ a:hover {
   line-height: 1.7;
   margin-bottom: 35px;
 }
-
 
 /*--------------------------------------------------------------
 # Contact Items
@@ -2809,7 +2709,6 @@ a:hover {
   font-weight: 500;
 }
 
-
 /*--------------------------------------------------------------
 # Social Media
 --------------------------------------------------------------*/
@@ -2856,7 +2755,6 @@ a:hover {
   transform: translateY(-3px);
 }
 
-
 /*--------------------------------------------------------------
 # Contact Form
 --------------------------------------------------------------*/
@@ -2869,7 +2767,6 @@ a:hover {
   border: 1px solid rgba(0, 0, 0, 0.05);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
 }
-
 
 /*--------------------------------------------------------------
 # Form Heading
@@ -2902,7 +2799,6 @@ a:hover {
   margin-bottom: 0;
 }
 
-
 /*--------------------------------------------------------------
 # Form Row
 --------------------------------------------------------------*/
@@ -2912,7 +2808,6 @@ a:hover {
   grid-template-columns: 1fr 1fr;
   gap: 18px;
 }
-
 
 /*--------------------------------------------------------------
 # Form Groups
@@ -2929,7 +2824,6 @@ a:hover {
   font-weight: 600;
   margin-bottom: 8px;
 }
-
 
 /*--------------------------------------------------------------
 # Input Wrapper
@@ -2958,7 +2852,6 @@ a:hover {
   top: 20px;
   transform: none;
 }
-
 
 /*--------------------------------------------------------------
 # Form Inputs
@@ -2993,7 +2886,6 @@ a:hover {
   line-height: 1.6;
 }
 
-
 /*--------------------------------------------------------------
 # Input Focus
 --------------------------------------------------------------*/
@@ -3010,7 +2902,6 @@ a:hover {
   color: #cd7672;
 }
 
-
 /*--------------------------------------------------------------
 # Placeholder
 --------------------------------------------------------------*/
@@ -3019,7 +2910,6 @@ a:hover {
 .contact-form textarea::placeholder {
   color: #aaa;
 }
-
 
 /*--------------------------------------------------------------
 # Send Button
@@ -3068,7 +2958,6 @@ a:hover {
   transform: translateX(4px);
 }
 
-
 /*--------------------------------------------------------------
 # Form Result
 --------------------------------------------------------------*/
@@ -3081,13 +2970,11 @@ a:hover {
   font-weight: 500;
 }
 
-
 /*--------------------------------------------------------------
 # Responsive
 --------------------------------------------------------------*/
 
 @media (max-width: 767px) {
-
   .contact-form {
     padding: 30px 25px;
   }
@@ -3107,5 +2994,295 @@ a:hover {
 
   .contact-form textarea {
     min-height: 140px;
+  }
+}
+
+/* =====================================================
+   3D GRAPHIC CAROUSEL
+===================================================== */
+
+.graphic-carousel-section {
+  position: relative;
+  min-height: calc(100vh - 80px);
+  padding: 90px 0 110px;
+  overflow: hidden;
+}
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.graphic-carousel-heading {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.graphic-carousel-heading h1 {
+  margin: 0;
+  color: #303030;
+  font-size: 58px;
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -2px;
+}
+
+.graphic-carousel-heading h1 span {
+  color: #d48d87;
+}
+
+.graphic-carousel-heading p {
+  max-width: 600px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* =====================================================
+   CAROUSEL
+===================================================== */
+
+.graphic-carousel {
+  position: relative;
+  width: 100%;
+  height: 620px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* =====================================================
+   3D STAGE
+===================================================== */
+
+.carousel-stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1600px;
+  transform-style: preserve-3d;
+}
+
+/* =====================================================
+   GRAPHIC CARDS
+===================================================== */
+
+.graphic-item {
+  position: absolute;
+  width: 260px;
+  height: 340px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #a65551;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+  transform-style: preserve-3d;
+  transition:
+    transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1),
+    opacity 0.6s ease,
+    filter 0.6s ease,
+    box-shadow 0.6s ease;
+  cursor: pointer;
+}
+
+/* =====================================================
+   IMAGE
+===================================================== */
+
+.graphic-item img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  padding: 10px;
+  transition: transform 0.5s ease;
+}
+
+/* =====================================================
+   HIDDEN CARDS
+===================================================== */
+
+.graphic-item.hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+/* =====================================================
+   HOVER
+===================================================== */
+
+.graphic-item:hover img {
+  transform: scale(1.05);
+}
+
+/* =====================================================
+   ARROWS
+===================================================== */
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  color: #cd7672;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* =====================================================
+   PREVIOUS
+===================================================== */
+
+.carousel-prev {
+  left: 20px;
+}
+
+/* =====================================================
+   NEXT
+===================================================== */
+
+.carousel-next {
+  right: 20px;
+}
+
+/* =====================================================
+   ARROW HOVER
+===================================================== */
+
+.carousel-arrow:hover {
+  background: rgba(205, 118, 114, 0.25);
+  border-color: #cd7672;
+}
+
+.carousel-prev:hover {
+  transform: translateY(-50%) translateX(-4px);
+}
+
+.carousel-next:hover {
+  transform: translateY(-50%) translateX(4px);
+}
+
+/* =====================================================
+   COUNTER
+===================================================== */
+
+.carousel-indicator {
+  text-align: center;
+
+  margin-top: -5px;
+}
+
+#carouselCounter {
+  color: rgba(255, 255, 255, 0.5);
+
+  font-size: 13px;
+
+  letter-spacing: 2px;
+}
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+  .graphic-carousel-section {
+    padding: 80px 0 70px;
+  }
+
+  .graphic-carousel {
+    height: 550px;
+  }
+
+  .graphic-item {
+    width: 210px;
+    height: 275px;
+  }
+
+  .carousel-arrow {
+    width: 52px;
+    height: 52px;
+
+    font-size: 22px;
+  }
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+  .graphic-carousel-section {
+    padding: 65px 0 60px;
+  }
+
+  .project-back-wrapper {
+    margin-bottom: 30px;
+  }
+
+  .graphic-carousel-heading {
+    margin-bottom: 20px;
+  }
+
+  .graphic-carousel-heading span {
+    font-size: 10px;
+    letter-spacing: 3px;
+  }
+
+  .graphic-carousel-heading h2 {
+    font-size: 34px;
+  }
+
+  .graphic-carousel-heading p {
+    font-size: 14px;
+
+    padding: 0 15px;
+  }
+
+  .graphic-carousel {
+    height: 470px;
+  }
+
+  .graphic-item {
+    width: 165px;
+    height: 215px;
+
+    border-radius: 16px;
+  }
+
+  .graphic-item img {
+    padding: 7px;
+  }
+
+  .carousel-arrow {
+    width: 45px;
+    height: 45px;
+
+    font-size: 19px;
+  }
+
+  .carousel-prev {
+    left: 2px;
+  }
+
+  .carousel-next {
+    right: 2px;
   }
 }
